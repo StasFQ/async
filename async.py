@@ -31,8 +31,8 @@ async def api3(session):
 async def main():
     async with aiohttp.ClientSession() as session:
         result = await asyncio.gather(api(session), api_2(session), api3(session))
-    result = sum(result) / len(result)
-    print(result)
+    answer = sum(result) / len(result)
+    print(answer)
 
 
 asyncio.run(main())
